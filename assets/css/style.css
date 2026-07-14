@@ -623,6 +623,13 @@ h3 {
   max-width: 42ch;
 }
 
+.support-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
 .donation-banner {
   display: flex;
   align-items: center;
@@ -651,6 +658,72 @@ h3 {
   background: var(--color-white);
   color: var(--color-red);
   box-shadow: none;
+}
+
+.sponsoring-panel {
+  padding: 2.2rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-soft);
+}
+
+.sponsoring-panel h2 {
+  margin-bottom: 1rem;
+}
+
+.sponsoring-panel p {
+  color: var(--color-gray-700);
+}
+
+.sponsor-logos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+.sponsor-logo-card {
+  min-height: 7rem;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  border: 1px dashed rgba(29, 29, 27, 0.2);
+  border-radius: 1rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 245, 242, 0.9));
+}
+
+.sponsor-logo-card img {
+  width: 100%;
+  max-width: 15rem;
+  max-height: 4.5rem;
+  object-fit: contain;
+}
+
+.sponsor-logo-card p {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.sponsor-logo-card--dark {
+  background: #050505;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.sponsor-logo-card--dark p {
+  color: var(--color-white);
+}
+
+.sponsor-logo-card span {
+  color: var(--color-gray-700);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .contact-section {
@@ -777,6 +850,7 @@ h3 {
   }
 
   .hero__grid,
+  .support-grid,
   .split-section,
   .editorial-grid,
   .contact-section,
@@ -808,6 +882,10 @@ h3 {
   .site-footer__meta {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .sponsor-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .site-nav {
@@ -855,6 +933,10 @@ h3 {
     padding: 5rem 0;
   }
 
+  .sponsor-logos {
+    grid-template-columns: 1fr;
+  }
+
   .brand__logo--horizontal {
     display: none;
   }
@@ -876,7 +958,7 @@ h3 {
 
   .program-card__thumb {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1;
   }
 
   .program-grid .card h3 {
