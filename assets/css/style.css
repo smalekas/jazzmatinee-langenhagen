@@ -625,17 +625,17 @@ h3 {
 
 .support-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
   align-items: stretch;
 }
 
 .donation-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: start;
   gap: 2rem;
-  padding: 2.4rem;
+  padding: 2.2rem;
   background:
     linear-gradient(135deg, rgba(227, 6, 19, 0.96), rgba(177, 12, 18, 0.98)),
     rgba(255, 255, 255, 0.9);
@@ -655,12 +655,21 @@ h3 {
 }
 
 .donation-banner .button--primary {
+  justify-self: start;
   background: var(--color-white);
   color: var(--color-red);
   box-shadow: none;
 }
 
+.donation-banner .support-note {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
 .sponsoring-panel {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
   padding: 2.2rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -680,6 +689,11 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+.sponsoring-panel__button {
+  justify-self: start;
   margin-top: 1.6rem;
 }
 
