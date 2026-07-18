@@ -718,6 +718,12 @@ h3 {
   color: var(--color-white);
 }
 
+.sponsor-logo-card--america-unlimited img {
+  width: auto;
+  max-height: 5.5rem;
+  filter: invert(1);
+}
+
 .sponsor-logo-card span {
   color: var(--color-gray-700);
   font-family: var(--font-display);
