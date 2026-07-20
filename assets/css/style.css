@@ -557,7 +557,7 @@ h3 {
 }
 
 .press-cards .card a {
-  overflow-wrap: anywhere;
+  white-space: nowrap;
 }
 
 .split-section,
@@ -951,6 +951,19 @@ h3 {
 
   .section {
     padding: 5rem 0;
+  }
+
+  .press-cards .card {
+    gap: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .press-cards .card h3 {
+    font-size: clamp(1.65rem, 9vw, 2.35rem);
+  }
+
+  .press-cards .card a {
+    font-size: clamp(0.82rem, 3.8vw, 1.05rem);
   }
 
   .sponsor-logos {
