@@ -464,7 +464,8 @@ h3 {
   padding: 1rem 1rem 0.95rem;
   border-radius: 0.9rem;
   background: var(--color-red);
-  color: var(--color-white);
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
   font-family: var(--font-display);
   font-size: 1.22rem;
   font-weight: 700;
@@ -735,7 +736,6 @@ h3 {
 .sponsor-logo-card--america-unlimited img {
   width: auto;
   max-height: 5.5rem;
-  filter: invert(1);
 }
 
 .sponsor-logo-card span {
