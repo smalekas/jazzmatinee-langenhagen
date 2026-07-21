@@ -31,7 +31,7 @@ for (const [file, [slug, title, description]] of Object.entries(pages)) {
   <meta name="twitter:image:alt" content="Plakat der Jazzmatinee Langenhagen 2026">
 `;
   html = html.replace(/(  <meta name="description"[^>]+>\n)/, `$1${social}`);
-  html = html.replace(/style\.css\?v=[^"]+/, "style.css?v=20260721-5");
+  html = html.replace(/style\.css\?v=[^"]+/, "style.css?v=20260721-6");
   html = html.replace(/href="\.\.\/index\.html/g, 'href="../');
   if (!html.includes('rel="manifest"')) html = html.replace(/(  <link rel="apple-touch-icon"[^>]+>\n)/, '$1  <link rel="manifest" href="../manifest.webmanifest">\n');
   await writeFile(file, html);

@@ -105,7 +105,7 @@ function render(event, index) {
   <meta name="twitter:description" content="${esc(metaDescription)}">
   <meta name="twitter:image" content="${imageUrl}">
   <meta name="twitter:image:alt" content="${esc(event.alt)}">
-  <link rel="stylesheet" href="../../assets/css/style.css?v=20260721-5">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=20260721-6">
   <script defer src="../../assets/js/main.js"></script>
   <script type="application/ld+json">${JSON.stringify(eventJson)}</script>
 </head>
