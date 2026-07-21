@@ -1,0 +1,11 @@
+{
+  "name": "jazzmatinee-langenhagen",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-event-pages.mjs && node scripts/enhance-page-metadata.mjs",
+    "test": "npm run test:seo",
+    "test:seo": "node tests/seo-check.mjs",
+    "build": "npm run generate && npm run test:seo"
+  }
+}

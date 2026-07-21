@@ -1,0 +1,17 @@
+{
+  "name": "Jazzmatinee Langenhagen 2026",
+  "short_name": "Jazzmatinee",
+  "description": "Acht kostenlose Open-Air-Konzerte im Rathausinnenhof Langenhagen.",
+  "lang": "de",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e30613",
+  "icons": [
+    {
+      "src": "/assets/images/logos/logo-jazzmatinee-initials.png",
+      "sizes": "1182x1183",
+      "type": "image/png"
+    }
+  ]
+}

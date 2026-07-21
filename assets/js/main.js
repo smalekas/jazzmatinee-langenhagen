@@ -18,17 +18,30 @@ if (header) {
 }
 
 if (menuToggle && navigation) {
+  const closeNavigation = () => {
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Navigation öffnen");
+    navigation.classList.remove("is-open");
+  };
+
   menuToggle.addEventListener("click", () => {
     const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
     menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+    menuToggle.setAttribute("aria-label", isExpanded ? "Navigation öffnen" : "Navigation schließen");
     navigation.classList.toggle("is-open", !isExpanded);
   });
 
   navigation.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      menuToggle.setAttribute("aria-expanded", "false");
-      navigation.classList.remove("is-open");
+      closeNavigation();
     });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+      closeNavigation();
+      menuToggle.focus();
+    }
   });
 }
 
