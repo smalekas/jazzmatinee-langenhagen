@@ -795,6 +795,10 @@ h3 {
   max-height: 5.5rem;
 }
 
+.sponsor-logo-card--mf-bauservice img {
+  filter: brightness(0) invert(1);
+}
+
 .sponsor-logo-card span {
   color: var(--color-gray-700);
   font-family: var(--font-display);
