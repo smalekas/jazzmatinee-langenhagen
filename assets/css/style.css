@@ -756,14 +756,25 @@ h3 {
 }
 
 .sponsor-logo-card {
-  min-height: 7rem;
+  min-height: 7.5rem;
   display: grid;
   place-items: center;
   padding: 1rem;
   border: 1px dashed rgba(29, 29, 27, 0.2);
   border-radius: 1rem;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 245, 242, 0.9));
+  background: var(--color-white);
+}
+
+.sponsor-logo-card a {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  border-radius: 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.sponsor-logo-card a:hover {
+  opacity: 0.75;
 }
 
 .sponsor-logo-card img {
@@ -773,21 +784,14 @@ h3 {
   object-fit: contain;
 }
 
-.sponsor-logo-card p {
-  margin-top: 0.75rem;
-  font-size: 0.95rem;
-  text-align: center;
-  color: var(--color-black);
-}
-
 .sponsor-logo-card--dark {
   background: #050505;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-.sponsor-logo-card--dark p {
-  color: var(--color-white);
+.sponsor-logo-card--filter-scholing img {
+  max-height: 5.5rem;
 }
 
 .sponsor-logo-card--america-unlimited img {
