@@ -1,0 +1,4 @@
+# www auf die Hauptdomain umleiten (dauerhaft, 301)
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.jazzmatinee-langenhagen\.de$ [NC]
+RewriteRule ^(.*)$ https://jazzmatinee-langenhagen.de/$1 [R=301,L]
