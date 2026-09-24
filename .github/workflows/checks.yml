@@ -1,0 +1,32 @@
+name: SEO- und Integritätsprüfungen
+
+# Die Live-Seite wird von Hostinger direkt aus main ausgeliefert.
+# Dieser Workflow prüft nur, ob der Build und die SEO-Checks durchlaufen.
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate pages and run SEO checks
+        run: npm run build
+
+      - name: Generated pages are committed
+        run: git diff --exit-code
