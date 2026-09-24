@@ -574,6 +574,21 @@ h3 {
   font-size: 1rem;
 }
 
+.program-grid .card p.program-card__link {
+  margin-top: 0.6rem;
+  color: var(--color-red);
+  font-weight: 700;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 .card h3,
 .card h2 {
   margin-bottom: 1rem;
