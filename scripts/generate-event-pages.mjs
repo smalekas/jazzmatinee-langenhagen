@@ -52,6 +52,9 @@ export const events = [
   }
 ];
 
+// Datum, an dem das Programm 2026 veröffentlicht wurde (Pflichtangabe für Google-Event-Snippets)
+const programPublishedAt = "2026-06-25T00:00:00+02:00";
+
 const esc = (value) => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 
 function render(event, index) {
@@ -78,7 +81,7 @@ function render(event, index) {
     image: [imageUrl], url: canonical,
     organizer: { "@type": "Organization", name: "City of Music e. V.", url: "https://jazzmatinee-langenhagen.de/" },
     performer: { "@type": "MusicGroup", name: event.name },
-    offers: { "@type": "Offer", price: 0, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: canonical },
+    offers: { "@type": "Offer", price: 0, priceCurrency: "EUR", availability: "https://schema.org/InStock", url: canonical, validFrom: programPublishedAt },
     isAccessibleForFree: true
   };
 
@@ -105,7 +108,7 @@ function render(event, index) {
   <meta name="twitter:description" content="${esc(metaDescription)}">
   <meta name="twitter:image" content="${imageUrl}">
   <meta name="twitter:image:alt" content="${esc(event.alt)}">
-  <link rel="stylesheet" href="../../assets/css/style.css?v=20260727-1">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=20260924-1">
   <script defer src="../../assets/js/main.js"></script>
   <script type="application/ld+json">${JSON.stringify(eventJson)}</script>
 </head>
